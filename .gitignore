@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Environment variables — NEVER commit real secrets
+.env
+.env.local
+.env.*.local
+backend/.env
+frontend/.env
+contracts/.env
+
+# Build outputs
+dist/
+build/
+*.tsbuildinfo
+
+# Foundry
+contracts/out/
+contracts/cache/
+contracts/broadcast/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor/OS
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# Vite
+.vite/

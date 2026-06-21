@@ -1,0 +1,87 @@
+.page { padding: 40px 0 80px; }
+
+.header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px; flex-wrap: wrap; gap: 16px; }
+.eyebrow { font-size: 11px; color: var(--green); letter-spacing: 1.5px; text-transform: uppercase; font-family: var(--font-mono); margin-bottom: 8px; }
+.title { font-size: 26px; font-weight: 500; color: var(--text-primary); letter-spacing: -0.5px; margin-bottom: 6px; }
+.sub { font-size: 14px; color: var(--text-secondary); max-width: 520px; line-height: 1.6; }
+
+.liveBadge { display: flex; align-items: center; gap: 7px; background: var(--green-bg); border: 0.5px solid var(--green-dim); border-radius: 100px; padding: 6px 14px; font-size: 12px; color: var(--green); font-family: var(--font-mono); flex-shrink: 0; align-self: flex-start; white-space: nowrap; }
+.liveDot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: pulse 1.5s infinite; }
+@keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.3; } }
+
+.errorBanner { background: #1a0e00; border: 0.5px solid #854f0b; border-radius: var(--radius-md); padding: 12px 14px; font-size: 13px; color: var(--amber); margin-bottom: 20px; }
+
+.continueBanner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  background: var(--bg-surface);
+  border: 0.5px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.continueBanner span { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+
+.continueBtn {
+  background: var(--green);
+  color: #080808;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 9px 18px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: opacity 0.15s;
+}
+.continueBtn:hover { opacity: 0.85; }
+
+.metricsGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.metric { background: var(--bg-surface); border: 0.5px solid var(--border); border-radius: var(--radius-md); padding: 14px 16px; }
+.metricVal { font-size: 18px; font-weight: 500; color: var(--text-primary); font-family: var(--font-mono); margin-bottom: 4px; }
+.metricLabel { font-size: 11px; color: var(--text-muted); }
+
+.logCard { background: var(--bg-surface); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 20px; min-height: 300px; }
+.logTitle { font-size: 13px; font-weight: 500; color: var(--text-primary); margin-bottom: 16px; font-family: var(--font-mono); }
+.logEmpty { font-size: 13px; color: var(--text-muted); font-family: var(--font-mono); padding: 20px 0; }
+.logList { display: flex; flex-direction: column; gap: 10px; }
+
+@keyframes fadeIn { from { opacity:0; transform:translateY(-4px); } to { opacity:1; transform:translateY(0); } }
+
+.taskCard {
+  background: var(--bg-elevated);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  animation: fadeIn 0.3s ease;
+}
+
+.taskCardTop { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 10px; }
+
+.logId { font-size: 11px; color: var(--text-muted); font-family: var(--font-mono); margin-bottom: 4px; }
+.logInput { font-size: 13px; color: var(--text-primary); line-height: 1.4; max-width: 460px; }
+
+.onChainBadge { font-size: 11px; font-family: var(--font-mono); white-space: nowrap; flex-shrink: 0; }
+
+.taskCardMeta { display: flex; gap: 14px; align-items: center; font-size: 11px; color: var(--text-muted); font-family: var(--font-mono); margin-bottom: 12px; flex-wrap: wrap; }
+
+.explorerLink { color: var(--green); text-decoration: underline; text-underline-offset: 2px; }
+.explorerLink:hover { opacity: 0.8; }
+
+.resultBox { background: var(--bg-surface); border: 0.5px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 10px 12px; font-size: 13px; line-height: 1.6; }
+
+.resultPending { color: var(--text-muted); font-family: var(--font-mono); font-size: 12px; }
+.resultComplete { color: var(--text-secondary); }
+.resultFailed { color: var(--amber); font-size: 12px; font-family: var(--font-mono); }
+
+@media (max-width: 900px) {
+  .metricsGrid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  .page { padding: 28px 0 60px; }
+  .taskCardTop { flex-direction: column; }
+  .logInput { max-width: 100%; }
+}

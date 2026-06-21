@@ -1,0 +1,80 @@
+.page { padding: 40px 0 80px; }
+
+.back { background: none; color: var(--text-secondary); font-size: 13px; margin-bottom: 28px; display: block; transition: color 0.15s; }
+.back:hover { color: var(--text-primary); }
+
+.layout { display: grid; grid-template-columns: 360px 1fr; gap: 16px; align-items: start; }
+
+.left, .right { display: flex; flex-direction: column; gap: 12px; }
+
+.profileCard { background: var(--bg-surface); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 24px; }
+
+.profileTop { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+
+.avatar { width: 48px; height: 48px; border-radius: var(--radius-md); background: var(--bg-elevated); border: 0.5px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+
+.profileInfo { flex: 1; min-width: 0; }
+.name { font-size: 20px; font-weight: 500; color: var(--text-primary); letter-spacing: -0.3px; }
+.type { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+
+.statusBadge { font-size: 11px; padding: 3px 10px; border-radius: 100px; border: 0.5px solid; text-transform: capitalize; font-family: var(--font-mono); }
+
+.description { font-size: 14px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px; }
+
+.caps { display: flex; flex-wrap: wrap; gap: 6px; }
+.cap { font-size: 11px; color: var(--text-secondary); background: var(--bg-elevated); border: 0.5px solid var(--border); border-radius: 100px; padding: 4px 10px; font-family: var(--font-mono); }
+
+.statsGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+
+.statCard { background: var(--bg-surface); border: 0.5px solid var(--border); border-radius: var(--radius-md); padding: 14px 16px; }
+.statVal { font-size: 18px; font-weight: 500; color: var(--text-primary); font-family: var(--font-mono); margin-bottom: 4px; }
+.statLabel { font-size: 12px; color: var(--text-muted); }
+
+.hireCard { background: var(--bg-surface); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 20px; }
+.hireTop { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.hirePrice { font-size: 22px; font-weight: 500; color: var(--text-primary); font-family: var(--font-mono); }
+.hireSub { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+.hireBtn { background: var(--green); color: #080808; font-size: 13px; font-weight: 500; padding: 10px 20px; border-radius: var(--radius-md); transition: opacity 0.15s; }
+.hireBtn:hover { opacity: 0.85; }
+.hireNote { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+.chartCard { background: var(--bg-surface); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 20px; }
+.chartHeader { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; }
+.chartLabel { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; font-family: var(--font-mono); margin-bottom: 4px; }
+.chartPrice { font-size: 18px; font-weight: 500; color: var(--green); font-family: var(--font-mono); }
+.chartMcapBlock { text-align: right; }
+.chartMcapVal { font-size: 16px; font-weight: 500; color: var(--text-primary); font-family: var(--font-mono); }
+.chart { margin: 0 -4px; }
+.chartNote { font-size: 11px; color: var(--text-muted); font-family: var(--font-mono); margin-top: 12px; text-align: center; }
+
+.tooltip { background: var(--bg-elevated); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 8px 12px; }
+.tooltipBlock { font-size: 11px; color: var(--text-muted); font-family: var(--font-mono); }
+.tooltipPrice { font-size: 13px; color: var(--green); font-family: var(--font-mono); margin-top: 2px; }
+
+.historyCard { background: var(--bg-surface); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 20px; }
+.historyTitle { font-size: 13px; font-weight: 500; color: var(--text-primary); margin-bottom: 16px; }
+.historyEmpty { font-size: 13px; color: var(--text-muted); line-height: 1.6; padding: 12px 0; }
+.liveFailedNote { font-size: 11px; color: var(--amber); font-family: var(--font-mono); margin-top: 8px; text-align: center; }
+.historyList { display: flex; flex-direction: column; }
+
+.taskRow { display: flex; justify-content: space-between; align-items: flex-start; padding: 12px 0; border-bottom: 0.5px solid var(--border-subtle); gap: 12px; }
+.taskRow:last-child { border-bottom: none; padding-bottom: 0; }
+
+.taskLeft { flex: 1; min-width: 0; }
+.taskId { font-size: 11px; color: var(--text-muted); font-family: var(--font-mono); margin-bottom: 3px; }
+.taskInput { font-size: 13px; color: var(--text-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.taskResult { font-size: 12px; color: var(--text-muted); line-height: 1.5; margin-top: 4px; white-space: normal; }
+.taskResultError { font-size: 12px; color: var(--amber); font-family: var(--font-mono); margin-top: 4px; }
+
+.taskRight { text-align: right; flex-shrink: 0; }
+.taskStatus { font-size: 12px; font-family: var(--font-mono); margin-bottom: 3px; text-transform: capitalize; }
+.taskMeta { font-size: 11px; color: var(--text-muted); font-family: var(--font-mono); }
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .page { padding: 24px 0 60px; }
+  .profileTop { flex-wrap: wrap; }
+}

@@ -1,0 +1,116 @@
+.wrap {
+  position: relative;
+}
+
+.connectBtn {
+  background: var(--green);
+  color: #080808;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 7px 16px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  transition: opacity 0.15s;
+}
+.connectBtn:hover:not(:disabled) { opacity: 0.85; }
+.connectBtn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.connectedBtn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--bg-elevated);
+  border: 0.5px solid var(--border-strong);
+  color: var(--text-primary);
+  font-size: 13px;
+  font-family: var(--font-mono);
+  padding: 7px 14px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  transition: border-color 0.15s;
+}
+.connectedBtn:hover { border-color: var(--green-dim); }
+
+.wrongChainBtn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: #1a0e00;
+  border: 0.5px solid #854f0b;
+  color: var(--amber);
+  font-size: 13px;
+  font-family: var(--font-mono);
+  padding: 7px 14px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  transition: opacity 0.15s;
+}
+.wrongChainBtn:hover { opacity: 0.85; }
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+  flex-shrink: 0;
+}
+
+.dotWarning {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--amber);
+  flex-shrink: 0;
+  animation: pulse 1.4s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  background: var(--bg-surface);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 4px;
+  min-width: 160px;
+  z-index: 200;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.menuItem {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  color: var(--text-secondary);
+  font-size: 13px;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  transition: background 0.15s, color 0.15s;
+}
+.menuItem:hover {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+}
+
+.menuItemHighlight {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: var(--green-bg);
+  border: 0.5px solid var(--green-dim);
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 4px;
+  transition: opacity 0.15s;
+}
+.menuItemHighlight:hover:not(:disabled) { opacity: 0.85; }
+.menuItemHighlight:disabled { opacity: 0.5; cursor: not-allowed; }
