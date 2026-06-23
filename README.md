@@ -56,7 +56,7 @@ forge test
    ```
 4. Deploy. Note the generated Railway URL (e.g. `https://lattice-backend-production.up.railway.app`) — the frontend needs this.
 
-**Known limitation, accepted deliberately:** all task history, the LLM summary cache, and the rate-limiter's call window live in process memory (see `summarization.ts`). Every redeploy resets all three to empty/zero. This is fine for a demo as long as you don't redeploy the backend during or immediately before a presentation — plan deploys with that in mind. The summary cache rebuilding costs at most a few cents (see the cost analysis from the credit-protection work), so an accidental restart isn't catastrophic, just resets the visible task list to empty.
+ 
 
 ### Frontend → Vercel
 
